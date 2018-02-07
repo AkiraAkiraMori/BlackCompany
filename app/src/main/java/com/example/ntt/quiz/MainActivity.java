@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //Listという、配列よりデータを追加しやすい型を使う
     List<Quiz> quizList;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -139,7 +138,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //            startActivity(intent);
 
         } else {
-            Intent intent = new Intent(this, goodpage.class);
+            Intent intent = new Intent(this, stresspage.class);
             intent.putExtra("point",point);
             startActivity(intent);
         }

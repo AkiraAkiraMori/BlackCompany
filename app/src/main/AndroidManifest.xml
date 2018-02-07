@@ -17,8 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".goodpage" />
-        <activity android:name=".badpage" />
-        <activity android:name=".middlepage"></activity>
+        <activity android:name=".stresspage" />
     </application>
 
 </manifest>
