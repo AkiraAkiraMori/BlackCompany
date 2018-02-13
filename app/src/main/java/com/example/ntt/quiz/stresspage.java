@@ -17,10 +17,13 @@ public class stresspage extends AppCompatActivity {
     int shakeCount = 0;
     ShakeGestureManager mGestureManager;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stresspage);
+
 
         // インテントを取得
         Intent intent = getIntent();
@@ -31,6 +34,13 @@ public class stresspage extends AppCompatActivity {
         int pointPercent = (int) ((float) point / 45f * 100f);
 
         Log.d("percent" ,"point is ..." + point);
+
+        Timer timer = new Timer();
+
+        timer.mActivity= this;
+
+        timer.execute(0);
+
     }
 
     protected void onResume() {
@@ -47,7 +57,6 @@ public class stresspage extends AppCompatActivity {
     private ShakeGestureManager.GestureListener mListener = new ShakeGestureManager.GestureListener() {
         @Override
         public void onGestureDetected(int gestureType, int gestureCount) {
-//            shakeCount = shakeCount + 1;
 
             if (shakeCount < 5) {
                 shakeCount = shakeCount +1;
@@ -62,11 +71,6 @@ public class stresspage extends AppCompatActivity {
                 startActivity(intent);
 
             }
-
-//                // ジェスチャーを認識したらここが呼ばれる
-//            Intent intent = new Intent(stresspage.this, goodpage.class);
-//            intent.putExtra("point", point);
-//            startActivity(intent);
 
         }
 
