@@ -40,7 +40,7 @@
             android:background="@android:color/background_dark"
             android:text="あなたの会社の \n ブラック度をチェック！"
             android:textAlignment="center"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@android:color/darker_gray"
             android:textSize="28sp" />
 
         <TextView
@@ -50,7 +50,7 @@
             android:layout_marginTop="20dp"
             android:text="1問目"
             android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@android:color/black"
             android:textSize="30sp" />
 
 
@@ -61,7 +61,7 @@
             android:layout_marginTop="24dp"
             android:text="問題文を表示"
             android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@android:color/black"
             android:textSize="30sp" />
 
         <Button
@@ -69,10 +69,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:backgroundTint="@android:color/holo_blue_light"
+            android:backgroundTint="?attr/actionModeSplitBackground"
             android:onClick="clickOption"
             android:text="選択肢１"
-            android:textColor="@android:color/background_light"
+            android:textColor="@android:color/white"
             android:textSize="20dp" />
 
         <Button
@@ -80,7 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:backgroundTint="@android:color/holo_blue_light"
+            android:backgroundTint="?attr/actionModeSplitBackground"
             android:onClick="clickOption"
             android:text="選択肢２"
             android:textColor="@android:color/background_light"
@@ -91,7 +91,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:backgroundTint="@android:color/holo_blue_light"
+            android:backgroundTint="@color/colorPrimaryDark"
             android:onClick="clickOption"
             android:text="選択肢３"
             android:textColor="@android:color/background_light"

@@ -14,6 +14,7 @@ import orz.kassy.shakegesture.ShakeGestureManager;
 public class stresspage extends AppCompatActivity {
 
     int point;
+    int shakeCount = 0;
     ShakeGestureManager mGestureManager;
 
     @Override
@@ -46,12 +47,26 @@ public class stresspage extends AppCompatActivity {
     private ShakeGestureManager.GestureListener mListener = new ShakeGestureManager.GestureListener() {
         @Override
         public void onGestureDetected(int gestureType, int gestureCount) {
-            // ジェスチャーを認識したらここが呼ばれる
+//            shakeCount = shakeCount + 1;
 
+            if (shakeCount < 5) {
+                shakeCount = shakeCount +1;
 
-            Intent intent = new Intent(stresspage.this, goodpage.class);
-            intent.putExtra("point", point);
-            startActivity(intent);
+                Log.d("percent" ,"shakeCount is ..." + shakeCount);
+
+            } else {
+                // 10回超シェイクを認識したらここが呼ばれる
+
+                Intent intent = new Intent(stresspage.this, goodpage.class);
+                intent.putExtra("point", point + shakeCount * 2); //追加
+                startActivity(intent);
+
+            }
+
+//                // ジェスチャーを認識したらここが呼ばれる
+//            Intent intent = new Intent(stresspage.this, goodpage.class);
+//            intent.putExtra("point", point);
+//            startActivity(intent);
 
         }
 
