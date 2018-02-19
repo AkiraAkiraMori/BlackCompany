@@ -1,7 +1,6 @@
 package com.example.ntt.quiz;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -10,10 +9,6 @@ import android.util.Log;
  */
 
 public class Timer extends AsyncTask <Integer, Integer, Integer> {
-
-
-
-
 
     public boolean isFinish = false;
     public Activity mActivity;
@@ -36,7 +31,7 @@ public class Timer extends AsyncTask <Integer, Integer, Integer> {
             // 途中経過を返す
             publishProgress(params[0]);
 
-        }while(params[0]<7);
+        }while(params[0]<40);
 
         return params[0] ;
     }
@@ -51,7 +46,10 @@ public class Timer extends AsyncTask <Integer, Integer, Integer> {
     @Override
     protected void onPostExecute(Integer result) {
 
-       mActivity.startActivity(new Intent(mActivity,goodpage.class));
+    //mActivity.startActivity(new Intent(mActivity,goodpage.class));
+//        Intent intent = new Intent(stresspage.this, goodpage.class);
+//        intent.putExtra("point", point + shakeCount * 2); //追加
+//        mActivity.startActivity(intent);
 
     }
 

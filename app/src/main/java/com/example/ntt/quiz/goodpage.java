@@ -27,8 +27,11 @@ public class goodpage extends AppCompatActivity {
         Intent intent = getIntent();
 
         point = intent.getIntExtra("point", 0);
+        int shakeCount = intent.getIntExtra("shakeCount", 0);
 
-        Log.d("percent" ,"point is ..." + point);
+        point = point + (shakeCount * 2);
+
+        Log.d("goodpage:percent" ,"point is ..." + point);
 
         resultText = findViewById(R.id.result);
         resultComent = findViewById(R.id.coment);
